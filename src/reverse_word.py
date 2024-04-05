@@ -1,10 +1,4 @@
-def reverse_string(sentence) -> str:
-    words = sentence.split(" ")
-    new_sentence = ""
-    for word in words:
-        if len(word) < 5:
-            new_sentence += word + " "
-        else:
-            reverse_word = word[::-1]
-            new_sentence += reverse_word + " "
-    return new_sentence.rstrip()
+def reverse_string(sentence: str) -> str:
+    words = [word[::-1] if len(word) >= 5 else word for word in sentence.split(" ")]
+    new_sentence = " ".join(words)
+    return new_sentence
