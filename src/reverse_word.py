@@ -1,2 +1,3 @@
 def reverse_string(sentence) -> str:
-    return sentence
+    words = sentence.split(" ")
+    return words
